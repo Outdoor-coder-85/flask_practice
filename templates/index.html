@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Flask App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 { color: #333; }
+        p { color: #666; }
+        .btn {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15 px;
+            transition: background-color 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Welcome back, {{ name }}!</h1>
+        <p>Your local Flask server is officially live and serving HTML.</p>
+        <p><a href="/about" class="btn">About Me →</a></p>
+    </div>
+</body>
+</html>
