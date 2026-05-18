@@ -5,19 +5,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # 1. Set your coding start date (Year, Month, Day)
-    # Change these numbers to the day you actually started if you want!
+    # Set your coding start date (Year, Month, Day)
     start_date = datetime(2026, 5, 1) 
     
-    # 2. Get today's exact date
+    # Get today's exact date and calculate the difference
     today = datetime.now()
-    
-    # 3. Calculate the difference
     difference = today - start_date
     days_coding = difference.days
     
-    # 4. Pass that "days_coding" variable into your HTML template!
-    return render_template('index.html', days=days_coding)
+    # Send the calculation directly to your home template
+    return render_template('index.html', name="Ryan", days=days_coding)
 
 @app.route('/about')
 def about():

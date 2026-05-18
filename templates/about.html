@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charshet="UTF-8"
-    <title><About Me</title>
-    <style>
-        body {
-            font-family: Syong Mong, proxima nova;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0j
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0.0,0.1);
-            text-align: center;
-            max-width: 400px;
-        }
-        h1 { color: #007BFF}
-        p { color: #333; line-height: 1.6; }
-        a { color: #007BFF; text-decoration: none; font-weight: bold; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-</body>
+<body>
 
-    <div class="card">
-        <h1>About Ryan</h1>
-        <p>I am an Instructional Designer exploring the powerful world of Python, Flask, and custom web development to take learning experience to the level.</p>
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-        <p><a href="/">← Go Back Home</a></p>
+    <nav class="navbar">
+        <div class="logo">🚀 Ryan's Dev Space</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>About Me</h1>
+        <p>Welcome to my portfolio! I'm a developer building dynamic web applications using Python and Flask.</p>
+        <p>This entire site is styled with CSS and deployed continuously using Render.</p>
+        
+        <a href="/" class="btn-primary">← Back to Home</a>
     </div>
 
 </body>
