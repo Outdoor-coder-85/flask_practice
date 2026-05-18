@@ -1,16 +1,27 @@
 from flask import Flask, render_template
+from datetime import datetime
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def home():
-    # Passing your practice string data directly into our HTML!
-    user_name = "Ryan"  
-    return render_template("index.html", name=user_name)
+    # 1. Set your coding start date (Year, Month, Day)
+    # Change these numbers to the day you actually started if you want!
+    start_date = datetime(2026, 5, 1) 
+    
+    # 2. Get today's exact date
+    today = datetime.now()
+    
+    # 3. Calculate the difference
+    difference = today - start_date
+    days_coding = difference.days
+    
+    # 4. Pass that "days_coding" variable into your HTML template!
+    return render_template('index.html', days=days_coding)
 
-@app.route("/about")
+@app.route('/about')
 def about():
-    return render_template("about.html")
+    return render_template('about.html')
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
