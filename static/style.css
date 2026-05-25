@@ -36,7 +36,7 @@ body {
 .container {
     max-width: 600px;
     margin: 50px auto;
-    background: #fff;
+    background: #3498db;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
