@@ -22,7 +22,7 @@ def about():
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    if request.method == 'POST'
+    if request.method == 'POST':
         name = request.form.get('visitor_name')
         message = request.form.get('visitor_message')
 
