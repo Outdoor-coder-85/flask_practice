@@ -9,10 +9,18 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">🚀 Ryan's Instructional Design Space</div>
-        <div class="nav-links">
+        <div class="logo"> 🚀Ryan's Personal Development Space</div>
+
+        <button class="hamburger' id="hamburger-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <div class="nav-links" id="nav-menu">
             <a href="/">Home</a>
             <a href="/about">About</a>
+            <a href="/contact">Contact</a>
         </div>
     </nav>
 
@@ -24,5 +32,13 @@
         <a href="/about" class="btn-primary">Learn More About Me →</a>
     </div>
 
+    <script>
+        const hamburger = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
