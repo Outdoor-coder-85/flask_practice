@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from datetime import datetime
 
 app = Flask(__name__)
@@ -19,6 +19,19 @@ def home():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST'
+        name = request.form.get('visitor_name')
+        message = request.form.get('visitor_message')
+
+        print(f"--- NEW MESSAGE FROM {name} ---")
+        print(f"Message: {message}")
+
+        return "<h3>Success! Message recevied.</h3><a href='/contact'>Back</a>"
+
+    return render_template('contact.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
